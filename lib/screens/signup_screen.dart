@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mostawak/components/accept_term_row.dart';
 import 'package:mostawak/components/header.dart';
+import 'package:mostawak/screens/login_screen.dart';
 import 'package:mostawak/widgets/custom_textfield.dart';
+
+import '../components/custom_button.dart';
 
 class SignupScreen extends StatelessWidget {
   final TextEditingController name = TextEditingController();
@@ -47,12 +50,19 @@ class SignupScreen extends StatelessWidget {
                     },
                   ),
                   const Spacer(),
+                  CustomButton(
+                    text: "SIGN UP!",
+                    onPressed: () {
+                    },
+                  ),
                   RowStatements(
                     showCheckbox: false,
                     normalText: "Already have an account? ",
                     linkText: "Login",
                     onLinkTap: () {
-                      print("Login tapped");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginScreen()));
                     },
                   ),
                   SizedBox(height: 20.h),

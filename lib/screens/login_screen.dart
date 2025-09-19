@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mostawak/components/header.dart';
+import 'package:mostawak/screens/signup_screen.dart';
 import '../components/accept_term_row.dart';
+import '../components/custom_button.dart';
 import '../widgets/custom_textfield.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -38,12 +40,19 @@ class LoginScreen extends StatelessWidget {
                   CustomTextfield(controller: email, hintText: "Email"),
                   SizedBox(height: 30.h),
                   const Spacer(),
+                  CustomButton(
+                    text: "LOGIN",
+                    onPressed: () {
+                    },
+                  ),
                   RowStatements(
                     showCheckbox: false,
                     normalText: "Already have an account? ",
                     linkText: "Login",
                     onLinkTap: () {
-                      print("Login tapped");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignupScreen()));
                     },
                   ),
                   SizedBox(height: 20.h),
