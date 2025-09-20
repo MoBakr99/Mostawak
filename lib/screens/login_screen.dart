@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mostawak/components/header.dart';
 import 'package:mostawak/screens/signup_screen.dart';
 import '../components/accept_term_row.dart';
-import '../components/custom_button.dart';
+import '../widgets/custom_button.dart';
 import '../widgets/custom_textfield.dart';
 
 class LoginScreen extends StatelessWidget {

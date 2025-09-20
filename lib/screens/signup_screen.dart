@@ -5,7 +5,7 @@ import 'package:mostawak/components/header.dart';
 import 'package:mostawak/screens/login_screen.dart';
 import 'package:mostawak/widgets/custom_textfield.dart';
 
-import '../components/custom_button.dart';
+import '../widgets/custom_button.dart';
 
 class SignupScreen extends StatelessWidget {
   final TextEditingController name = TextEditingController();
