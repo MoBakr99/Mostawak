@@ -1,0 +1,69 @@
+import 'package:flutter/material.dart';
+import 'package:mostawak/generated/l10n.dart';
+import 'package:mostawak/screens/forgot_pass_2.dart';
+
+class ForgotPassScreen3 extends StatelessWidget {
+  const ForgotPassScreen3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back_sharp,
+            color: Color(0xff16697b),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 28),
+        ),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 50),
+          child: Column(
+            children: <Widget>[
+              Align(
+                  // alignment: Alignment.centerLeft,
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Text(
+                    S.of(context).passwordReset,
+                    style: Theme.of(context).textTheme.displayLarge,
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                S.of(context).passwordResetMessage,
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ForgotPassScreen2(
+                                email: 'mobakr99x@gmail.com')));
+                  },
+                  child: Text(
+                    S.of(context).confirm,
+                    style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                        fontSize: 23,
+                        color: Theme.of(context)
+                            .elevatedButtonTheme
+                            .style
+                            ?.foregroundColor
+                            ?.resolve({})),
+                  )),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
