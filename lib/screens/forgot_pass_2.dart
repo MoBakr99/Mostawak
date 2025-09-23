@@ -177,6 +177,7 @@ class _ForgotPassScreen2State extends State<ForgotPassScreen2> {
                     S.of(context).verifyCode,
                     style: Theme.of(context).textTheme.displayLarge?.copyWith(
                           fontSize: 23,
+                          fontWeight: FontWeight.w700,
                           color: Theme.of(context)
                               .elevatedButtonTheme
                               .style

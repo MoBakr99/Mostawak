@@ -54,6 +54,7 @@ class ForgotPassScreen3 extends StatelessWidget {
                     S.of(context).confirm,
                     style: Theme.of(context).textTheme.displayLarge?.copyWith(
                         fontSize: 23,
+                        fontWeight: FontWeight.w700,
                         color: Theme.of(context)
                             .elevatedButtonTheme
                             .style
