@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mostawak/screens/forgot_pass_3.dart';
+import 'package:mostawak/screens/confirm_reset_screen.dart';
 
 import '../generated/l10n.dart';
 
-class ForgotPassScreen2 extends StatefulWidget {
-  const ForgotPassScreen2({super.key, required this.email});
+class OtpScreen extends StatefulWidget {
+  const OtpScreen({super.key, required this.email});
 
   final String email;
 
   @override
-  State<ForgotPassScreen2> createState() => _ForgotPassScreen2State();
+  State<OtpScreen> createState() => _OtpScreenState();
 }
 
-class _ForgotPassScreen2State extends State<ForgotPassScreen2> {
+class _OtpScreenState extends State<OtpScreen> {
   final _controllers = List.generate(6, (_) => TextEditingController());
   final _focusNodes = List.generate(6, (_) => FocusNode());
   bool _validOTP = true;
@@ -26,7 +26,7 @@ class _ForgotPassScreen2State extends State<ForgotPassScreen2> {
     });
     if (_validOTP) {
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const ForgotPassScreen3()));
+          MaterialPageRoute(builder: (context) => const ConfirmResetScreen()));
     }
   }
 

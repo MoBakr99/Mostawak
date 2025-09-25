@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mostawak/generated/l10n.dart';
-import 'package:mostawak/screens/forgot_pass_2.dart';
+import 'package:mostawak/screens/otp_screen.dart';
 
-class ForgotPassScreen3 extends StatelessWidget {
-  const ForgotPassScreen3({super.key});
+class ConfirmResetScreen extends StatelessWidget {
+  const ConfirmResetScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class ForgotPassScreen3 extends StatelessWidget {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ForgotPassScreen2(
+                            builder: (context) => const OtpScreen(
                                 email: 'mobakr99x@gmail.com')));
                   },
                   child: Text(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:mostawak/screens/forgot_pass_2.dart';
+import 'package:mostawak/screens/otp_screen.dart';
 import 'package:mostawak/screens/light_theme.dart';
 
 import 'generated/l10n.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: LightTheme.theme(_language),
-      home: const ForgotPassScreen2(
+      home: const OtpScreen(
         email: 'mobakr99x@gmail.com',
       ),
       localizationsDelegates: const [
