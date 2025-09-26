@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({super.key});
+
   @override
-  _OnBoardingScreenState createState() => _OnBoardingScreenState();
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
@@ -14,12 +15,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     {
       "image": "assets/images/Welcome.svg",
       "title": "Welcome to mostawak !",
-      "description": "Your place to learn and develop in simple and easy steps"
+      "description": "Your place to learn and develop in simple and easy steps",
     },
     {
       "image": "assets/images/winners.svg",
       "title": "Challenge Your Friends !",
-      "description": "Compete with your friends, test your knowledge, and make learning more exciting."
+      "description":
+          "Compete with your friends, test your knowledge, and make learning more exciting.",
     },
   ];
 
@@ -59,48 +61,51 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             ],
                           ),
                         ),
-                        
+
                         SizedBox(height: 20),
-                        
+
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: index == 0 
-                            ? RichText(
-                                textAlign: TextAlign.center,
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    fontSize: 35,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Bebas Neue",
-                                    color: Color(0XFF82C0CB),
-                                  ),
-                                  children: [
-                                    TextSpan(text: "Welcome to "),
-                                    TextSpan(
-                                      text: "Mostawak !",
-                                      style: TextStyle(color: Color(0XFF16697B)),
+                          child:
+                              index == 0
+                                  ? RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 35,
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: "Bebas Neue",
+                                        color: Color(0XFF82C0CB),
+                                      ),
+                                      children: [
+                                        TextSpan(text: "Welcome to "),
+                                        TextSpan(
+                                          text: "Mostawak !",
+                                          style: TextStyle(
+                                            color: Color(0XFF16697B),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                   
-                                  ],
-                                ),
-                              )
-                            : RichText(
-                                textAlign: TextAlign.center,
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    fontSize: 35,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Bebas Neue",
-                                    color: Color(0XFF82C0CB),
+                                  )
+                                  : RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 35,
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: "Bebas Neue",
+                                        color: Color(0XFF82C0CB),
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: "Challenge Your Friends !",
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                  children: [
-                                    TextSpan(text: "Challenge Your Friends !"),
-                                    
-                                  ],
-                                ),
-                              ),
                         ),
-                        
+
                         SizedBox(height: 15),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -120,7 +125,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 },
               ),
             ),
-            
+
             // Bottom buttons section
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -131,8 +136,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0XFF16697B),
-                     
-                      
+
                       //foregroundColor: Colors.black,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -141,9 +145,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, "/home");
                     },
-                    child: Text("Skip", style: TextStyle(color: Color(0XFFECE7E3),fontFamily: "Bebas Neue",fontSize: 24,fontWeight: FontWeight.w400)),
+                    child: Text(
+                      "Skip",
+                      style: TextStyle(
+                        color: Color(0XFFECE7E3),
+                        fontFamily: "Bebas Neue",
+                        fontSize: 24,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
-                  
+
                   // Next Button (Circle with SVG)
                   GestureDetector(
                     onTap: () {
@@ -168,7 +180,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           "assets/images/image 1.svg",
                           width: 35,
                           height: 35,
-                          color: Colors.white ,
+                          color: Colors.white,
                         ),
                       ),
                     ),
